@@ -16,3 +16,11 @@ alias gi="sudo gem install"
 alias giv="sudo gem install -v"
 alias gci="git pull --rebase && rake && git push"
 alias tlf="tail -f"
+
+alias ls="ls -Fh"
+alias ll="ls -Al"
+alias l="ls -AF"
+
+alias s="screen"
+alias v="vim"
+alias p="python"
