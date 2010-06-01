@@ -1,14 +1,13 @@
+# set PATH so it includes user's private bin if it exists
+if [ -d ~/bin ] ; then
+    PATH=~/bin:"${PATH}"
+fi
+
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
 export HISTCONTROL=ignoredups
 shopt -s checkwinsize
-# make less more friendly for non-text input files, see lesspipe(1)
-[ -x /usr/bin/lesspipe ] && eval "$(lesspipe)"
-# set variable identifying the chroot you work in (used in the prompt below)
-if [ -z "$debian_chroot" ] && [ -r /etc/debian_chroot ]; then
-    debian_chroot=$(cat /etc/debian_chroot)
-fi
 
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
@@ -26,14 +25,9 @@ if [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
 fi
 
-alias ls="ls --color -Fh"
-alias ll="ls -Al"
-alias l="ls -AF"
-
-alias ssh="ssh -X"
-alias s="screen"
-alias v="vim"
-alias p="python"
+if [ -f ~/.aliases ]; then
+  source ~/.aliases
+fi
 
 GREEN="\[\033[0;32m\]"
 WHITE="\[\033[1;37m\]"
