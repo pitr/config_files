@@ -6,6 +6,8 @@ backtick 1 1 1 date -u +%Y-%m-%dT%TZ
 hardstatus alwayslastline
 hardstatus string '%{gk}[ %{G}%H %{g}][%= %{wk}%?%-Lw%?%{=b kR}(%{W}%n*%f %t%?(%u)%?%{=b kR})%{= kw}%?%+Lw%?%?%= %{g}][%{Y}%l%{g}]%{=b C}[ %m/%d %c ]%{W}'
 
+defscrollback 1024
+
 startup_message off
 
 activity "%c activity -> %n%f %t"
