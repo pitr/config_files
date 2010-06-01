@@ -5,7 +5,7 @@
 [push]
   default = tracking
 [color]
-	diff = auto
+#	diff = auto
 	status = auto
 	branch = auto
 [core]
@@ -13,6 +13,7 @@
 [format]
   pretty = %Cblue%h%Creset %Cgreen[%cr]%Creset (%an) %s
 [alias]
+  b = branch
   c = commit -m
   a = add
   di = diff
