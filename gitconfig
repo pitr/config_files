@@ -16,6 +16,7 @@
   b = branch
   c = commit -m
   a = add
+  co = checkout
   di = diff
   dic = diff --cached
   pl = pull
