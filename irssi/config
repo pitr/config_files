@@ -207,6 +207,12 @@ statusbar = {
   };
 };
 settings = {
-  core = { real_name = "User Pitr"; user_name = "pitr"; nick = "pitr"; };
+  core = {
+    real_name = "Pitr";
+    user_name = "pitrapen";
+    nick = "pitrpen";
+    timestamp_format = "%H:%M:%S";
+  };
   "fe-text" = { actlist_sort = "refnum"; };
 };
+
