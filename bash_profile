@@ -32,4 +32,13 @@ fi
 GREEN="\[\033[0;32m\]"
 WHITE="\[\033[1;37m\]"
 NONE="\[\033[0m\]"
-PS1="\n${GREEN}-==[${WHITE}\h${GREEN}]=-=[${WHITE}\$(date +%d%m):\$(date +%H%M)${GREEN}]=-=[${WHITE}\w${GREEN}]==-\n${WHITE}#${NONE} "
+
+function parse_git_dirty {
+  [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit (working directory clean)" ]] && echo "*"
+}
+
+function parse_git_branch {
+  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1$(parse_git_dirty)/"
+}
+
+PS1="\n${GREEN}-==[${WHITE}\h${GREEN}]=-=[${WHITE}\$(parse_git_branch)${GREEN}]=-=[${WHITE}\w${GREEN}]==-\n${WHITE}#${NONE} "
