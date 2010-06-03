@@ -19,3 +19,6 @@ activity "%c activity -> %n%f %t"
 vbell_msg "[[[ ding ]]]"
 vbell off
 nethack on
+
+utf8 on
+altscreen on
