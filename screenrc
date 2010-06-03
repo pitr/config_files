@@ -2,6 +2,10 @@ shell -$SHELL
 screen -t main	0
 screen -t code	1
 screen -t gcc	2
+screen -t git	3
+screen -t irc	4
+screen -t etc	5
+
 backtick 1 1 1 date -u +%Y-%m-%dT%TZ
 hardstatus alwayslastline
 hardstatus string '%{gk}[ %{G}%H %{g}][%= %{wk}%?%-Lw%?%{=b kR}(%{W}%n*%f %t%?(%u)%?%{=b kR})%{= kw}%?%+Lw%?%?%= %{g}][%{Y}%l%{g}]%{=b C}[ %m/%d %c ]%{W}'
