@@ -1,0 +1,8 @@
+servers = (
+  {
+    address = "verne.freenode.net";
+    chatnet = "Freenode";
+    port = "6667";
+    autoconnect = "Yes";
+  }
+);
