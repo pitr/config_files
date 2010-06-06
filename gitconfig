@@ -9,7 +9,7 @@
   status = auto
   branch = auto
 [core]
-	excludesfile = ~/.gitignore
+  excludesfile = ~/.gitignore
 [format]
   pretty = %Cblue%h%Creset %Cgreen[%cr]%Creset (%an) %s
 [alias]
@@ -17,6 +17,7 @@
   c = commit -m
   a = add
   co = checkout
+  d = diff
   di = diff
   dic = diff --cached
   pl = pull
@@ -24,6 +25,7 @@
   plre = pull --rebase
   st = status
   out = log origin..HEAD
+  tip = log HEAD^..HEAD
   lg = log -p
   r = remote -v
   me = log --date=local --pretty=short --author=pitr.vern@gmail.com --stat
