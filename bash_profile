@@ -42,3 +42,20 @@ function parse_git_branch {
 }
 
 PS1="\n${GREEN}-==[${WHITE}\h${GREEN}]=-=[${WHITE}\$(parse_git_branch)${GREEN}]=-=[${WHITE}\w${GREEN}]==-\n${WHITE}#${NONE} "
+
+
+function hack {
+  CURRENT=`git branch | grep '\*' | awk '{print $2}'`
+  git checkout master
+  git pull origin master
+  git checkout ${CURRENT}
+  git rebase master
+}
+
+function ship {
+  CURRENT=`git branch | grep '\*' | awk '{print $2}'`
+  git checkout master
+  git merge ${CURRENT}
+  git push origin master
+  git checkout ${CURRENT}
+}
