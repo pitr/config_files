@@ -13,7 +13,7 @@
 [format]
   pretty = %Cblue%h%Creset %Cgreen[%cr]%Creset (%an) %s
 [alias]
-  b = branch
+  b = branch -a -v
   c = commit -m
   a = add
   co = checkout
