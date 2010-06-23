@@ -29,6 +29,10 @@ if [ -f ~/.aliases ]; then
   source ~/.aliases
 fi
 
+if [ -f ~/.bashrc ]; then
+  source ~/.bashrc
+fi
+
 GREEN="\[\033[0;32m\]"
 WHITE="\[\033[1;37m\]"
 NONE="\[\033[0m\]"
