@@ -2,6 +2,12 @@
 
 cutstring="DO NOT EDIT BELOW THIS LINE"
 
+#create vim folders
+
+mkdir -p ~/.vim
+mkdir -p ~/.vim/backup
+mkdir -p ~/.vim/swp
+
 for name in *; do
   target="$HOME/.$name"
   if [ -e $target ]; then
