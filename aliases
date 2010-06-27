@@ -25,3 +25,6 @@ alias l="ls -AF"
 alias s="screen"
 alias v="vim"
 alias p="python"
+
+alias hs="hack && ship"
+alias hsp="hack && ship && deploy"

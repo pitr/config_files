@@ -63,3 +63,10 @@ function ship {
   git push origin master
   git checkout ${CURRENT}
 }
+
+function deploy {
+  CURRENT=`git branch | grep '\*' | awk '{print $2}'`
+  git checkout master
+  git push heroku master
+  git checkout ${CURRENT}
+}
