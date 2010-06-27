@@ -27,4 +27,4 @@ alias v="vim"
 alias p="python"
 
 alias hs="hack && ship"
-alias hsp="hack && ship && deploy"
+alias hsd="hack && ship && deploy"
