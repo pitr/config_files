@@ -33,6 +33,7 @@
   g = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
   ci = commit
   ca = commit --amend
+  s = stash
 [user]
   name = pitr
   email = pitr.vern@gmail.com
