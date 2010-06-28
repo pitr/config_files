@@ -18,8 +18,7 @@
   a = add
   co = checkout
   d = diff
-  di = diff
-  dic = diff --cached
+  dc = diff --cached
   pl = pull
   ps = push
   plre = pull --rebase
