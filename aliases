@@ -9,9 +9,10 @@ alias ls="ls -Fh"
 alias ll="ls -Al"
 alias l="ls -AF"
 
-alias s="screen"
+#alias s="screen"
 alias v="vim"
 alias p="python"
+alias r="ruby"
 
 alias hs="hack && ship"
 alias hsd="hack && ship && deploy"
