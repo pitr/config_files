@@ -5,7 +5,7 @@
 [push]
   default = tracking
 [color]
-# diff = auto
+  diff = auto
   status = auto
   branch = auto
 [core]
