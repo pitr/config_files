@@ -22,7 +22,7 @@
   pl = pull
   ps = push
   plre = pull --rebase
-  st = status
+  s = status
   out = log origin..HEAD
   tip = log HEAD^..HEAD
   lg = log -p
@@ -32,7 +32,7 @@
   g = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
   ci = commit
   ca = commit --amend
-  s = stash
+  st = stash
 [user]
   name = pitr
   email = pitr.vern@gmail.com
