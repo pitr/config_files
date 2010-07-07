@@ -1,6 +1,7 @@
-alias migrate="rake db:migrate db:test:prepare"
-alias remigrate="rake db:migrate && rake db:migrate:redo && rake db:schema:dump db:test:prepare"
-alias remongrate="rake mongoid:migrate && rake mongoid:migrate:redo"
+alias migrate="rake db:migrate"
+alias remigrate="rake db:migrate && rake db:migrate:redo"
+#alias remongrate="rake mongoid:migrate && rake mongoid:migrate:redo"
+
 alias gadd="git add -u && git add . && git status"
 alias g="git"
 alias gi="sudo gem install"
