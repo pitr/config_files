@@ -10,6 +10,7 @@
   branch = auto
 [core]
   excludesfile = ~/.gitignore
+  editor = e -w
 [format]
   pretty = %Cblue%h%Creset %Cgreen[%cr]%Creset (%an) %s
 [alias]
@@ -23,6 +24,7 @@
   ps = push
   plre = pull --rebase
   s = status
+  st = status
   out = log origin..HEAD
   tip = log HEAD^..HEAD
   lg = log -p
@@ -32,7 +34,6 @@
   g = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
   ci = commit
   ca = commit --amend
-  st = stash
 [user]
   name = pitr
   email = pitr.vern@gmail.com
