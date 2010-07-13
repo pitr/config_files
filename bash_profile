@@ -9,6 +9,9 @@ fi
 export HISTCONTROL=ignoredups
 shopt -s checkwinsize
 
+# Make C-a/C-e work as home/end
+set -o emacs
+
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
 xterm*|rxvt*)
