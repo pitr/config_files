@@ -3,6 +3,10 @@ if [ -d ~/bin ] ; then
     PATH=~/bin:"${PATH}"
 fi
 
+if [ -d /usr/local/sbin ] ; then
+    PATH=/usr/local/sbin:"${PATH}"
+fi
+
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
