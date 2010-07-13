@@ -25,6 +25,7 @@
   plre = pull --rebase
   s = status
   st = status
+  t = stash
   out = log origin..HEAD
   tip = log HEAD^..HEAD
   lg = log -p
