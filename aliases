@@ -29,3 +29,4 @@ alias r="rails"
 
 alias hs="hack && ship"
 alias hsd="hack && ship && deploy"
+alias ssp="hack && rake && ship"
