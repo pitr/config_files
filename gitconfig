@@ -20,7 +20,7 @@
   co = checkout
   d = diff
   dc = diff --cached
-  pl = pull
+  pl = pull --rebase
   ps = push
   plre = pull --rebase
   s = status
