@@ -23,7 +23,7 @@
   pl = pull --rebase
   ps = push
   plre = pull --rebase
-  s = status -s
+  s = status -sb
   st = status
   t = stash
   out = log origin..HEAD
