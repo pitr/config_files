@@ -18,10 +18,8 @@
   c = commit -m
   a = add
   co = checkout
-  d = diff
-  wd = diff --word-diff
-  dc = diff --cached
-  wdc = diff --cached --word-diff
+  d = diff --word-diff
+  dc = diff --cached --word-diff
   pl = pull --rebase
   ps = push
   plre = pull --rebase
