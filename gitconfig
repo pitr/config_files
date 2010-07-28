@@ -24,7 +24,7 @@
   ps = push
   plre = pull --rebase
   s = status -sb
-  st = status
+  st = status -sb
   t = stash
   out = log origin..HEAD
   tip = log HEAD^..HEAD
