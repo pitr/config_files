@@ -1,0 +1,11 @@
+# character
+OPTIONS=name:Bodhidharma,align:lawful,gender:male
+# appearance
+OPTIONS=color,hilite_pet,lit_corridor,DECgraphics,boulder:8
+OPTIONS=showexp,showscore,time
+OPTIONS=msg_window:f,disclose:+i+a+v+g+c
+OPTIONS=nomail
+# controls
+OPTIONS=autodig,!autopickup
+# names
+OPTIONS=catname:Zina,dogname:Dasha,fruit:avocado
