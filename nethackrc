@@ -1,5 +1,5 @@
 # character
-OPTIONS=name:Bodhidharma,align:lawful,gender:male
+OPTIONS=name:Bodhidharma,gender:male
 # appearance
 OPTIONS=color,hilite_pet,lit_corridor,DECgraphics,boulder:8
 OPTIONS=showexp,showscore,time
