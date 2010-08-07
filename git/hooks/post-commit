@@ -1,0 +1,4 @@
+#!/bin/sh
+
+afplay ~/.git/hooks/happykids.wav > /dev/null 2>&1 &
+
