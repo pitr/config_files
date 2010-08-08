@@ -54,8 +54,12 @@ function parse_git_dirty {
   [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit (working directory clean)" ]] && echo "*"
 }
 
+function parse_git_stash {
+  git stash list 2> /dev/null | wc -l | awk '{print $1}'
+}
+
 function parse_git_branch {
-  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1$(parse_git_dirty)/"
+  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1$(parse_git_dirty)_[$(parse_git_stash)]/"
 }
 
 PS1="\n${GREEN}-==[${WHITE}\h${GREEN}]=-=[${WHITE}\$(parse_git_branch)${GREEN}]=-=[${WHITE}\w${GREEN}]==-\n${WHITE}#${NONE} "
@@ -83,3 +87,4 @@ function deploy {
   git push heroku master
   git checkout ${CURRENT}
 }
+
