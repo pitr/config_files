@@ -19,7 +19,7 @@ alias gg="git g"
 alias gt="git t"
 
 alias sta="git stash"
-alias uns="git unstash"
+alias uns="git stash pop"
 
 alias ls="ls -Fh"
 alias ll="ls -Al"
