@@ -29,6 +29,7 @@ alias l="ls -AF"
 alias v="vim"
 alias p="python"
 alias r="rails"
+alias e.='e .'
 
 alias hs="hack && ship"
 alias hsd="hack && ship && deploy"
