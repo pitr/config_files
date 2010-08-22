@@ -1,0 +1,8 @@
+# set PATH so it includes user's private bin if it exists
+if [ -d ~/bin ] ; then
+    export PATH=~/bin:"${PATH}"
+fi
+
+if [ -d /usr/local/sbin ] ; then
+    export PATH=/usr/local/sbin:"${PATH}"
+fi

@@ -1,0 +1,72 @@
+function hack {
+  CURRENT=`git branch | grep '\*' | awk '{print $2}'`
+  git checkout master
+  git pull origin master
+  git checkout ${CURRENT}
+  git rebase master
+}
+
+function ship {
+  CURRENT=`git branch | grep '\*' | awk '{print $2}'`
+  git checkout master
+  git merge ${CURRENT}
+  git push origin master
+  git checkout ${CURRENT}
+}
+
+function deploy {
+  CURRENT=`git branch | grep '\*' | awk '{print $2}'`
+  git checkout master
+  git push heroku master
+  git checkout ${CURRENT}
+}
+
+# rails stuff
+alias migrate="rake db:migrate"
+alias remigrate="rake db:migrate && rake db:migrate:redo"
+alias sc='script/console'
+alias ss='script/server'
+alias sg='script/generate'
+alias tlog='tail -f log/development.log'
+
+# git stuff
+alias gadd="git add -u && git add . && git status"
+alias g="git"
+alias gi="sudo gem install"
+alias gs="git s"
+alias ga="git a"
+alias gst="git st"
+alias gb="git b"
+alias gc="git c"
+alias gd="git d"
+alias gdc="git dc"
+alias gpl="git pl"
+alias gps="git ps"
+alias gr="git r"
+alias gg="git g"
+alias gt="git t"
+alias gbs="git bs"
+alias grb="git rb"
+
+# git stash
+alias sta="git stash"
+alias uns="git stash pop"
+
+# file system stuff
+alias ls="ls -Fh"
+alias ll="ls -Al"
+alias l="ls -AF"
+function c { cd ~/code/$1; }
+alias ..='cd ..'
+
+# other stuff
+#alias s="screen"
+alias v="vim"
+alias p="python"
+alias r="rails"
+alias e.='e .'
+
+# hack && ship
+alias hs="hack && ship"
+alias hsd="hack && ship && deploy"
+alias hrs="hack && rake && ship"

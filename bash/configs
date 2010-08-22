@@ -1,0 +1,40 @@
+# make GO compile
+export GOROOT=`brew --cellar`/go/HEAD
+export GOBIN=/usr/local/bin
+export GOARCH=amd64
+export GOOS=darwin
+
+export EDITOR="mate -w"
+
+export HISTCONTROL=ignoredups
+shopt -s checkwinsize
+
+# Make C-a/C-e work as home/end
+set -o emacs
+
+# If this is an xterm set the title to user@host:dir
+case "$TERM" in
+xterm*|rxvt*)
+    PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD/$HOME/~}\007"'
+    ;;
+*)
+    ;;
+esac
+
+GREEN="\[\033[0;32m\]"
+WHITE="\[\033[1;37m\]"
+NONE="\[\033[0m\]"
+
+function _parse_git_dirty {
+  [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit (working directory clean)" ]] && echo "*"
+}
+
+function _parse_git_stash {
+  git stash list 2> /dev/null | wc -l | awk '{print $1}'
+}
+
+function _parse_git_branch {
+  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1$(_parse_git_dirty)_[$(_parse_git_stash)]/"
+}
+
+PS1="\n${GREEN}-==[${WHITE}\h${GREEN}]=-=[${WHITE}\$(_parse_git_branch)${GREEN}]=-=[${WHITE}\w${GREEN}]==-\n${WHITE}#${NONE} "
