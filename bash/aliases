@@ -74,3 +74,5 @@ alias e.='e .'
 alias hs="hack && ship"
 alias hsd="hack && ship && deploy"
 alias hrs="hack && rake && ship"
+
+alias pp="git pull --rebase && git push"
