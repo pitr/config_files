@@ -59,11 +59,15 @@ alias l="ls -AF"
 function c { cd ~/code/$1; }
 alias ..='cd ..'
 
+# rails stuff
+alias r="rails"
+alias rc="rails c"
+alias rs="rails s"
+
 # other stuff
 #alias s="screen"
 alias v="vim"
 alias p="python"
-alias r="rails"
 alias e.='e .'
 
 # hack && ship
