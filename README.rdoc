@@ -63,8 +63,13 @@ also use show_log and hide_log in script/console to show the log inline.
   tlog        # tail -f log/development.log
   migrate     # rake db:migrate
   remigrate   # rake db:migrate && rake db:migrate:redo
+  
+  # rails 3 aliases
+  rs          # rails server
+  rc          # rails console
+  rg          # rails generate
 
-Helpers form http://reinh.com/blog/2008/08/27/hack-and-and-ship.html
+Helpers from http://reinh.com/blog/2008/08/27/hack-and-and-ship.html
 
   hs      # hack && ship = pull + rebase/merge + push
   hsd     # hack && ship && deploy = hs + push to heroku
