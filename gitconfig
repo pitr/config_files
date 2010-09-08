@@ -27,6 +27,9 @@
   tip = log HEAD^..HEAD
   lg = log -p
   r = remote -v
+  rc = rebase --continue
+  ra = rebase --abort
+  ri = rebase -i
   me = log --date=local --pretty=short --author=pitr.vern@gmail.com --stat
   qpl = log --pretty=\"%Cblue%h%Creset %Cgreen[%cr]%Creset %s\" origin/production..origin/master
   g = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr by %C(yellow)%an%Creset)%Creset' --abbrev-commit --date=relative
