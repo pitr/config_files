@@ -37,6 +37,7 @@
   ca = commit --amend
   bs = bisect
   rb = rebase
+  f = flow
 [user]
   name = pitr
   email = pitr.vern@gmail.com

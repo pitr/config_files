@@ -47,6 +47,9 @@ alias gg="git g"
 alias gt="git t"
 alias gbs="git bs"
 alias grb="git rb"
+alias grc="git rc"
+alias gra="git ra"
+alias gf="git f"
 
 # git stash
 alias sta="git stash"
