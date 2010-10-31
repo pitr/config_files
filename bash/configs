@@ -9,6 +9,8 @@ export EDITOR="mate -w"
 export HISTCONTROL=ignoredups
 shopt -s checkwinsize
 
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
+
 # Make C-a/C-e work as home/end
 set -o emacs
 
