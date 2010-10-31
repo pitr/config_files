@@ -3,6 +3,8 @@ if [ -d ~/bin ] ; then
     export PATH=~/bin:"${PATH}"
 fi
 
+export PATH="${PATH}":.
+
 if [ -d /usr/local/sbin ] ; then
     export PATH=/usr/local/sbin:"${PATH}"
 fi
