@@ -4,7 +4,7 @@ export GOBIN=/usr/local/bin
 export GOARCH=amd64
 export GOOS=darwin
 
-export EDITOR="mate -w"
+export EDITOR="e -w"
 
 export HISTCONTROL=ignoredups
 shopt -s checkwinsize
