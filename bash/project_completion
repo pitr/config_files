@@ -16,7 +16,7 @@ class ProjectCompletion
   end
   
   def projects
-    `ls ~/code/`.split
+    `ls -F ~/code/ | grep -E "/$"`.split
   end
 end
 
