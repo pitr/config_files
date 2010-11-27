@@ -5,6 +5,10 @@ if [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
 fi
 
+if [ -f /usr/local/etc/bash_completion.d/npm-completion.sh ]; then
+  source /usr/local/etc/bash_completion.d/npm-completion.sh
+fi
+
 complete -C ~/.bash/rake_completion -o default rake
 complete -C ~/.bash/project_completion -o default c
 source ~/.bash/git_completion
