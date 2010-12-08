@@ -29,6 +29,7 @@ alias ss='script/server'
 alias sg='script/generate'
 alias tlog='tail -f log/development.log'
 alias bi='bundle install'
+alias bu='bundle update'
 
 # git stuff
 alias gadd="git add -u && git add . && git status"
