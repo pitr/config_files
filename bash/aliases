@@ -21,6 +21,14 @@ function deploy {
   git checkout ${CURRENT}
 }
 
+function grep4 {
+  sed -n '
+  '/$1/' !{;H;x;s/^.*\n\(.*\n.*\)$/\1/;x;}
+  '/$1/' {;H;n;H;x;p;a\
+  ---
+  }'
+}
+
 # rails stuff
 alias migrate="rake db:migrate"
 alias remigrate="rake db:migrate && rake db:migrate:redo"
