@@ -1,8 +1,10 @@
 # make GO compile
-export GOROOT=`brew --cellar`/go/HEAD
-export GOBIN=/usr/local/bin
-export GOARCH=amd64
-export GOOS=darwin
+if [ -d "/usr/local/Library" ]; then
+  export GOROOT=`brew --cellar`/go/HEAD
+  export GOBIN=/usr/local/bin
+  export GOARCH=amd64
+  export GOOS=darwin
+fi
 
 export EDITOR="e -w"
 
@@ -10,6 +12,7 @@ export HISTCONTROL=ignoredups
 shopt -s checkwinsize
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
+[[ -s "/usr/local/rvm/scripts/rvm" ]] && source "/usr/local/rvm/scripts/rvm"  # This loads system-wide RVM into a shell session.
 
 # Make C-a/C-e work as home/end
 set -o emacs
