@@ -39,7 +39,23 @@ function _parse_git_stash {
 }
 
 function _parse_git_branch {
-  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1$(_parse_git_dirty)_[$(_parse_git_stash)]/"
+  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1$(_parse_git_dirty)_$(_parse_git_stash)/"
 }
 
-PS1="\n${GREEN}-==[${WHITE}\h${GREEN}]=-=[${WHITE}\$(_parse_git_branch)${GREEN}]=-=[${WHITE}\w${GREEN}]==-\n${WHITE}#${NONE} "
+function _parse_git_part {
+  echo -n "[git]($(_parse_git_branch))"
+}
+
+function _parse_ruby_version {
+  ruby -v 2>/dev/null | awk '{print$2}'
+}
+
+function _parse_ruby_part {
+  echo -n "[ruby]($(_parse_ruby_version))"
+}
+
+function _print_prompt {
+  printf "%$(($COLUMNS-1))s" "$(_parse_git_part) $(_parse_ruby_part)"
+}
+
+PS1="\n\w\n\$(_print_prompt)\r* "
