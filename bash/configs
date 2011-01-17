@@ -58,4 +58,4 @@ function _print_prompt {
   printf "%$(($COLUMNS-1))s" "$(_parse_git_part) $(_parse_ruby_part)"
 }
 
-PS1="\n\w\n\$(_print_prompt)\r* "
+PS1="\n\h:\w\n\$(_print_prompt)\r# "
