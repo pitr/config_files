@@ -41,3 +41,5 @@
 [user]
   name = pitr
   email = pitr.vern@gmail.com
+[branch]
+	autosetuprebase = always
