@@ -42,7 +42,7 @@ alias bu='bundle update'
 # git stuff
 alias gadd="git add -u && git add . && git status"
 alias g="git"
-alias gi="sudo gem install"
+alias gi="gem install"
 alias gs="git s"
 alias ga="git a"
 alias gst="git st"
