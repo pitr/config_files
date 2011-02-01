@@ -80,6 +80,7 @@ alias rg="rails g"
 
 # other stuff
 #alias s="screen"
+alias tu="tmux"
 alias v="vim"
 alias p="python"
 alias e.='e .'
