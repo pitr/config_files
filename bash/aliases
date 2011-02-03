@@ -80,7 +80,12 @@ alias rg="rails g"
 
 # other stuff
 #alias s="screen"
+
+# screen replacement
 alias tu="tmux"
+alias tua="tmux attach -t"
+alias tun="tmux new -s"
+
 alias v="vim"
 alias p="python"
 alias e.='e .'
