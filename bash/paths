@@ -16,3 +16,7 @@ fi
 if [ -d /usr/local/lib/node ] ; then
     export NODE_PATH=/usr/local/lib/node
 fi
+
+if [ -d ~/Dropbox/bin ] ; then
+    export PATH=~/Dropbox/bin:"${PATH}"
+fi
