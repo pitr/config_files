@@ -9,13 +9,15 @@ require 'irb/completion'
 
 IRB.conf[:PROMPT_MODE] = :SIMPLE
 
-%w[rubygems looksee/shortcuts wirble].each do |g|
+%w[rubygems looksee wirble].each do |g|
   begin
     require g
   rescue LoadError
     warn "- Might want to gem install #{g}"
   end
 end
+
+Looksee.editor = "mate -l%l %f" if defined? Looksee
 
 # Prompt behavior
 ARGV.concat [ "--readline", "--prompt-mode", "simple" ]
