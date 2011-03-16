@@ -24,7 +24,7 @@
   st = status -sb
   t = tag
   out = log origin..HEAD
-  tip = log HEAD^..HEAD
+  tip = log -n1
   lg = log -p
   r = remote -v
   rc = rebase --continue
