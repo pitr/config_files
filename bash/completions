@@ -28,3 +28,7 @@ if [ -f /usr/local/etc/bash_completion.d/git-completion.bash ]; then
 else
   source ~/.bash/git_completion
 fi
+
+if [ -f `brew --prefix`/Library/Contributions/brew_bash_completion.sh ]; then
+  source `brew --prefix`/Library/Contributions/brew_bash_completion.sh
+fi
