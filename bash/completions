@@ -5,15 +5,16 @@ if [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
 fi
 
-if [ -f /usr/local/etc/bash_completion.d/npm-completion.sh ]; then
-  source /usr/local/etc/bash_completion.d/npm-completion.sh
+if [ -d /usr/local/etc/bash_completion.d ]; then
+  for file in $(/usr/bin/env ls -1 /usr/local/etc/bash_completion.d); do
+    source /usr/local/etc/bash_completion.d/$file
+  done
 fi
 
 complete -C ~/.bash/rake_completion -o default rake
 complete -C ~/.bash/project_completion -o default c
 
 if [ -f /usr/local/etc/bash_completion.d/git-completion.bash ]; then
-  source /usr/local/etc/bash_completion.d/git-completion.bash
   complete -o default -o nospace -F _git g
   complete -o default -o nospace -F _git_add ga
   complete -o default -o nospace -F _git_branch gb
