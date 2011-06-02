@@ -40,8 +40,14 @@ alias bi='bundle install'
 alias bu='bundle update'
 
 # git stuff
+g() {
+  if [[ $# == '0' ]]; then
+    git s
+  else
+    git "$@"
+  fi
+}
 alias gadd="git add -u && git add . && git status"
-alias g="git"
 alias gi="gem install"
 alias gs="git s"
 alias ga="git a"
