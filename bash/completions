@@ -37,3 +37,5 @@ fi
 if [ -f /usr/local/Library/Contributions/brew_bash_completion.sh ]; then
   source `brew --prefix`/Library/Contributions/brew_bash_completion.sh
 fi
+
+source ~/.bash/ssh_completion

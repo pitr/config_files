@@ -1,0 +1,12 @@
+_complete_ssh_hosts () {
+  COMPREPLY=()
+  cur="${COMP_WORDS[COMP_CWORD]}"
+  comp_ssh_hosts=$(
+    if [ -f ~/.ssh/known_hosts ]; then
+      cut -f1 -d' ' ~/.ssh/known_hosts | cut -f1 -d,
+    fi
+  )
+  COMPREPLY=( $(compgen -W "${comp_ssh_hosts}" -- $cur))
+  return 0
+}
+complete -F _complete_ssh_hosts ssh
