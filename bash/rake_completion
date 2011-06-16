@@ -59,7 +59,7 @@ class RakeCompletion
   end
   
   def generate_tasks
-    tasks = `rake --prereqs | grep "^rake"`.split("\n")[1..-1].collect {|line| line.split[1]}
+    tasks = `rake --prereqs | grep "^rake"`.lines.map {|line| line.split[1]}
     File.open(cache_file, 'w') { |f| f.write tasks.join("\n") }
     tasks
   end
