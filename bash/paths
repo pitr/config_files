@@ -22,3 +22,8 @@ fi
 if [ -d ~/Dropbox/bin ] ; then
     export PATH=~/Dropbox/bin:"${PATH}"
 fi
+
+if [ -d ~/.cabal/bin ] ; then
+    export PATH=~/.cabal/bin:"${PATH}"
+fi
+
