@@ -29,6 +29,11 @@ function grep4 {
   }'
 }
 
+# open man pages in mate
+function tman {
+  MANWIDTH=160 MANPAGER='col -bx' man $@ | mate
+}
+
 # rails stuff
 alias migrate="rake db:migrate"
 alias remigrate="rake db:migrate && rake db:migrate:redo"
