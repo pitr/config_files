@@ -36,7 +36,7 @@ alias sc='script/console'
 alias ss='script/server'
 alias sg='script/generate'
 alias tlog='tail -f log/development.log'
-alias bi='bundle install'
+alias bi='bundle install --binstubs=,'
 alias bu='bundle update'
 
 # git stuff
