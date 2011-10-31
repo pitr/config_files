@@ -9,6 +9,7 @@ fi
 export EDITOR="e -w"
 
 export HISTCONTROL=ignoredups
+export HISTSIZE=100000
 shopt -s checkwinsize
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
