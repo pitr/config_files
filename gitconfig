@@ -38,6 +38,7 @@
   bs = bisect
   rb = rebase
   f = flow
+  su = submodule update --init --recursive --quiet
 [user]
   name = pitr
   email = pitr.vern@gmail.com
