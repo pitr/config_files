@@ -100,7 +100,7 @@ alias tus="tmux switch-client -t"
 
 alias v="vim"
 alias p="python"
-alias e.='e .'
+alias e.='e . &'
 
 # hack && ship
 alias hs="hack && ship"
