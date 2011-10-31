@@ -40,11 +40,11 @@ function _parse_git_stash {
 }
 
 function _parse_git_branch {
-  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1$(_parse_git_dirty)_$(_parse_git_stash)/"
+  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1$(_parse_git_dirty)^$(_parse_git_stash) /"
 }
 
 function _parse_git_part {
-  echo -n "[git]($(_parse_git_branch))"
+  echo -n "$(_parse_git_branch)"
 }
 
 function _parse_ruby_version {
@@ -52,11 +52,11 @@ function _parse_ruby_version {
 }
 
 function _parse_ruby_part {
-  echo -n "[ruby]($(_parse_ruby_version))"
+  echo -n "(ruby-$(_parse_ruby_version))"
 }
 
 function _print_prompt {
-  printf "%$(($COLUMNS-1))s" "$(_parse_git_part) $(_parse_ruby_part)"
+  printf "$(_parse_git_part)$(_parse_ruby_part)"
 }
 
-PS1="\n\h:\w\n\$(_print_prompt)\r# "
+PS1="\n\h:$GREEN\w$NONE \$(_print_prompt)\n# "
