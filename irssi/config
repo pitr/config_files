@@ -207,8 +207,8 @@ statusbar = {
 };
 settings = {
   core = {
-    real_name = "Pitr";
-    user_name = "pitrapen";
+    real_name = "pitr";
+    user_name = "pitr";
     nick = "pitrpen";
     timestamp_format = "%H:%M:%S";
   };
