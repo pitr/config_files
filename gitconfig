@@ -1,5 +1,5 @@
 [push]
-  default = tracking
+  default = current
 [color]
   diff = auto
   status = auto
