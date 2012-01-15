@@ -11,6 +11,17 @@ Bundle 'gmarik/vundle'
 Bundle 'Lokaltog/vim-powerline'
 " adds file tree
 Bundle 'scrooloose/nerdtree'
+" automatically end if's with end's etc
+Bundle 'tpope/vim-endwise'
+" vim-rails, the
+Bundle 'tpope/vim-rails'
+" surround stuff with brackets and stuff
+Bundle 'tpope/vim-surround'
+" just like in TextMate, open files
+Bundle 'git://git.wincent.com/command-t.git'
+" vivid chalk color scheme
+Bundle 'tpope/vim-vividchalk'
+
 
 " open a NERDTree automatically when directory is opened
 autocmd vimenter * if !argc() | NERDTree | endif
