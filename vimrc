@@ -7,7 +7,15 @@ call vundle#rc()
 
 Bundle 'gmarik/vundle'
 
+" adds awesome statusbar
 Bundle 'Lokaltog/vim-powerline'
+" adds file tree
+Bundle 'scrooloose/nerdtree'
+
+" open a NERDTree automatically when directory is opened
+autocmd vimenter * if !argc() | NERDTree | endif
+" close vim when NERDTree is the only window left
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
