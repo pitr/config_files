@@ -10,3 +10,6 @@ source ~/.bash/configs
 if [ -f ~/.bashrc ]; then
   . ~/.bashrc
 fi
+
+# first in PATH is bundler's bin folder
+export PATH=,:"${PATH}"
