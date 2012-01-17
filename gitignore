@@ -7,11 +7,10 @@ tags
 .svn
 
 # Ruby
-.rvmrc
-.rbenv-version
 ,
 .bundle
 .sass-cache
+.rbenv-version
 
 # Xcode
 build/*
