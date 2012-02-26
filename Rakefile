@@ -31,6 +31,8 @@ task :install do
   end
 end
 
+task :default => :install
+
 def replace_file(file)
   system %Q{rm -rf "$HOME/.#{file}"}
   link_file(file)
