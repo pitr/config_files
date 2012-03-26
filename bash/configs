@@ -6,6 +6,8 @@ if [ -d "/usr/local/Cellar/go" ]; then
   export GOOS=darwin
 fi
 
+shopt -s histappend
+
 export EDITOR="e -w"
 
 export HISTCONTROL=ignoredups
