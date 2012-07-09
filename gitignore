@@ -1,18 +1,44 @@
+## General
 .*.swp
-tags
 .swo
 *.scratch.*
 *~
 .DS_Store
 .svn
 
-# Ruby
+## Ruby
 ,
 .bundle
 .sass-cache
 .rbenv-version
+*.gem
+*.rbc
+.config
+coverage
+rdoc
+spec/reports
+test/tmp
+test/version_tmp
+tmp
+# Rails
+*.rbc
+*.sassc
+.sass-cache
+capybara-*.html
+.rspec
+/.bundle
+/vendor/bundle
+/log/*
+/tmp/*
+/db/*.sqlite3
+/public/system/*
+/coverage/
+/spec/tmp/*
+**.orig
+rerun.txt
+pickle-email-*.html
 
-# Xcode
+## Xcode
 build/*
 *.pbxuser
 !default.pbxuser
@@ -25,6 +51,41 @@ build/*
 *.xcworkspace
 !default.xcworkspace
 xcuserdata
-profile
+/profile
 *.moved-aside
-coverage/
+
+## Go
+# Compiled Object files, Static and Dynamic libs (Shared Objects)
+*.o
+*.a
+*.so
+# Folders
+_obj
+_test
+# Architecture specific extensions/prefixes
+*.[568vq]
+[568vq].out
+# Others
+*.cgo1.go
+*.cgo2.c
+_cgo_defun.c
+_cgo_gotypes.go
+_cgo_export.*
+_testmain.go
+
+
+## Node.js
+lib-cov
+*.seed
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
+pids
+logs
+results
+node_modules
+npm-debug.log
+
