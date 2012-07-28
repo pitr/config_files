@@ -13,3 +13,5 @@ fi
 
 # first in PATH is bundler's bin folder
 export PATH=,:"${PATH}"
+
+[[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
