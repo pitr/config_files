@@ -1,23 +1,15 @@
-# print SQL to STDOUT
-if ENV.include?('RAILS_ENV') && !Object.const_defined?('RAILS_DEFAULT_LOGGER')
-  require 'logger'
-  RAILS_DEFAULT_LOGGER = Logger.new(STDOUT)
-end
-
 # Autocomplete
 require 'irb/completion'
 
 IRB.conf[:PROMPT_MODE] = :SIMPLE
 
-%w[rubygems looksee wirble].each do |g|
+%w[rubygems interactive_editor].each do |g|
   begin
     require g
   rescue LoadError
     warn "- Might want to gem install #{g}"
   end
 end
-
-Looksee.editor = "mate -l%l %f" if defined? Looksee
 
 # Prompt behavior
 ARGV.concat [ "--readline", "--prompt-mode", "simple" ]
@@ -32,7 +24,7 @@ class Object
   def local_methods(obj = self)
     (obj.methods - obj.class.superclass.instance_methods).sort
   end
-  
+
   # print documentation
   #
   #   ri 'Array#pop'
