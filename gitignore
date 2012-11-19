@@ -37,6 +37,7 @@ capybara-*.html
 **.orig
 rerun.txt
 pickle-email-*.html
+tmp/restart.txt
 
 ## Xcode
 build/*
@@ -89,3 +90,4 @@ results
 node_modules
 npm-debug.log
 
+.powenv
