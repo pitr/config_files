@@ -4,6 +4,7 @@
   diff = auto
   status = auto
   branch = auto
+  ui = 1
 [core]
   excludesfile = ~/.gitignore
   editor = e -w
@@ -39,8 +40,13 @@
   rb = rebase
   f = flow
   su = submodule update --init --recursive --quiet
+  who = blame -CCCw
 [user]
   name = pitr
   email = pitr.vern@gmail.com
 [branch]
-	autosetuprebase = always
+  autosetuprebase = always
+[credential]
+  helper = osxkeychain
+[help]
+  autocorrect = 1
