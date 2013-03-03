@@ -14,10 +14,6 @@ fi
 complete -C ~/.bash/rake_completion -o default rake
 complete -C ~/.bash/project_completion -o default c
 
-if [ -f /usr/local/Cellar/go/HEAD/misc/bash/go ]; then
-  source /usr/local/Cellar/go/HEAD/misc/bash/go
-fi
-
 if [ -f /usr/local/etc/bash_completion.d/git-completion.bash ]; then
   complete -o default -o nospace -F _git g
   complete -o default -o nospace -F _git_add ga
