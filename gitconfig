@@ -42,7 +42,7 @@
   su = submodule update --init --recursive --quiet
   who = blame -CCCw
 [user]
-  name = pitr
+  name = ☃ pitr
   email = pitr.vern@gmail.com
 [branch]
   autosetuprebase = always
