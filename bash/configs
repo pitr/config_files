@@ -6,8 +6,6 @@ export HISTCONTROL=ignoredups
 export HISTSIZE=100000
 shopt -s checkwinsize
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
-[[ -s "/usr/local/rvm/scripts/rvm" ]] && source "/usr/local/rvm/scripts/rvm"  # This loads system-wide RVM into a shell session.
 if [ -s "$HOME/.rbenv" ]; then
   export PATH="$HOME/.rbenv/bin:$PATH"  # This loads Rbenv
   eval "$(rbenv init -)"
