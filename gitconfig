@@ -7,7 +7,7 @@
   ui = 1
 [core]
   excludesfile = ~/.gitignore
-  editor = e -w
+  editor = subl -w
   autocrlf = input
 [format]
   pretty = %Cblue%h%Creset %Cgreen[%cr]%Creset (%an) %s
