@@ -57,9 +57,9 @@ function exitstatus {
 
   if [ "$EXITSTATUS" -eq "0" ]
   then
-    PS1="\n\h:$GREEN\w$NONE \$(_print_prompt)\n# "
+    PS1="\n$GREEN\w$NONE \$(_print_prompt)\n# "
   else
-    PS1="\n\h:$RED\w$NONE \$(_print_prompt)\n# "
+    PS1="\n$RED\w$NONE \$(_print_prompt)\n# "
   fi
 }
 
