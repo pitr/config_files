@@ -27,3 +27,10 @@ if [ -d ~/.cabal/bin ] ; then
     export PATH=~/.cabal/bin:"${PATH}"
 fi
 
+
+if [ -d /usr/local/opt/aws-iam-tools/jars ] ; then
+  export JAVA_HOME="$(/usr/libexec/java_home)"
+  export AWS_IAM_HOME="/usr/local/opt/aws-iam-tools/jars"
+  export AWS_CREDENTIAL_FILE=$HOME/.aws-credentials-master
+fi
+
