@@ -82,6 +82,7 @@ alias ll="ls -Al"
 alias l="ls -AF"
 function c { cd ~/code/$1; }
 alias ..='cd ..'
+alias ...='cd ../..'
 
 # rails3 stuff
 alias r="rails"
