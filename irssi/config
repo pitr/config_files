@@ -209,7 +209,7 @@ settings = {
   core = {
     real_name = "pitr";
     user_name = "pitr";
-    nick = "pitrpen";
+    nick = "pitr";
     timestamp_format = "%H:%M:%S";
   };
   "fe-text" = { actlist_sort = "refnum"; };
