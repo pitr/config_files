@@ -73,3 +73,5 @@ export RUBY_FREE_MIN=600000
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 
+export LOLCOMMITS_FORK=1
+
