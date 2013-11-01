@@ -52,6 +52,17 @@ g() {
     git "$@"
   fi
 }
+
+gpr() {
+  originurl=$(git config --get remote.origin.url)
+  originurl=${originurl/git\@github\.com\:/https://github.com/}
+  originurl=${originurl/\git:/https:}
+  originurl=${originurl/\.git/}
+  branchName=$(git rev-parse --abbrev-ref HEAD)
+  giturl=$originurl"/compare/"$branchName"?expand=1"
+  open $giturl
+}
+
 alias gadd="git add -u && git add . && git status"
 alias gi="gem install"
 alias gs="git s"
