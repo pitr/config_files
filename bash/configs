@@ -57,9 +57,9 @@ function exitstatus {
 
   if [ "$EXITSTATUS" -eq "0" ]
   then
-    PS1="\n$GREEN\w$NONE \$(_print_prompt)\n# "
+    PS1="\n$GREEN\w$NONE \$(_print_prompt)\n${GREEN}✔$NONE "
   else
-    PS1="\n$RED\w$NONE \$(_print_prompt)\n# "
+    PS1="\n$RED\w$NONE \$(_print_prompt)\n${RED}✔$NONE "
   fi
 }
 
@@ -74,4 +74,3 @@ export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 
 export LOLCOMMITS_FORK=1
-
