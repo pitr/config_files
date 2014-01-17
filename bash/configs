@@ -59,7 +59,7 @@ function exitstatus {
   then
     PS1="\n$GREEN\w$NONE \$(_print_prompt)\n${GREEN}✔$NONE "
   else
-    PS1="\n$RED\w$NONE \$(_print_prompt)\n${RED}✔$NONE "
+    PS1="\n$RED\w$NONE \$(_print_prompt)\n${RED}✘$NONE "
   fi
 }
 
