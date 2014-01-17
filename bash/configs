@@ -74,3 +74,4 @@ export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 
 export LOLCOMMITS_FORK=1
+export LOLCOMMITS_DELAY=10
