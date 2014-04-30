@@ -11,6 +11,11 @@ if [ -s "$HOME/.rbenv" ]; then
   eval "$(rbenv init -)"
 fi
 
+if [ -s "/usr/local/opt/chruby/share/chruby/chruby.sh" ]; then
+  source /usr/local/opt/chruby/share/chruby/chruby.sh
+  source /usr/local/opt/chruby/share/chruby/auto.sh
+fi
+
 # Make C-a/C-e work as home/end
 set -o emacs
 
