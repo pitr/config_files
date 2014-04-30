@@ -63,6 +63,19 @@ gpr() {
   open $giturl
 }
 
+gbr() {
+  originurl=$(git config --get remote.origin.url)
+  originurl=${originurl/git\@bitbucket\.org\:/https://bitbucket.org/}
+  originurl=${originurl/\git:/https:}
+  originurl=${originurl/\.git/}
+
+  path=$(git config --get remote.origin.url | sed -e 's/git@bitbucket.org://')
+
+  branchName=$(git rev-parse --abbrev-ref HEAD)
+  giturl=$originurl"/pull-request/new?source="$path"::"$branchName
+  open $giturl
+}
+
 gbc() {
   git branch --merged | grep -v "\*" | xargs -n 1 git branch -d
 }
