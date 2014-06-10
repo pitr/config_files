@@ -37,9 +37,6 @@ function tman {
 # rails stuff
 alias migrate="rake db:migrate"
 alias remigrate="rake db:migrate && rake db:migrate:redo"
-alias sc='script/console'
-alias ss='script/server'
-alias sg='script/generate'
 alias tlog='tail -f log/development.log'
 alias bi='bundle install --binstubs=, --path=.bundle/gems'
 alias bu='bundle update'
@@ -99,6 +96,7 @@ alias grb="git rb"
 alias grc="git rc"
 alias gra="git ra"
 alias gf="git f"
+alias gup="git up"
 
 # git stash
 alias sta="git stash"
@@ -127,8 +125,6 @@ alias tua="tmux attach -t"
 alias tun="tmux new -s"
 alias tus="tmux switch-client -t"
 
-alias v="vim"
-alias p="python"
 alias e='subl .'
 
 # hack && ship
