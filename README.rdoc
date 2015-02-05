@@ -1,7 +1,6 @@
 = Pitr's Dot Files
 
-They scare me!
-
+***IMPORTANT*** change name and email in `.gitconfig` after installation
 
 == Installation
 
@@ -9,10 +8,9 @@ They scare me!
   cd ~/.config_files
   rake install
 
-
 == Environment
 
-Mac OS X will work. UNIX-based OS should work (the only problem is EDITOR is textmate).
+Mac OS X will work. UNIX-based OS should work (the only problem is EDITOR is Sublime Text).
 
 == Commands
 
@@ -33,7 +31,7 @@ Shortcuts for most used programs:
   v - vim
   r - rails
   p - python
-  e. - TextMate
+  e. - Sublime Text
 
 Tab completion is also added to rake and git commands:
 
@@ -48,7 +46,8 @@ but you can simply remove the files to flush the cache.
 When in a git controlled directory, you'll notice the current branch
 name shows up in the prompt while in a git repository.
 
-  -==[pitr-home]=-=[release*_[2]]=-=[~/code/config_files]==-
+  ~/code/config_files master^0 (ruby-2.1.2)
+  ✔
 
   release - branch name
   * - dirty repository
@@ -64,7 +63,7 @@ also use show_log and hide_log in script/console to show the log inline.
   migrate     # rake db:migrate
   remigrate   # rake db:migrate && rake db:migrate:redo
   
-  # rails 3 aliases
+  # rails 3+ aliases
   rs          # rails server
   rc          # rails console
   rg          # rails generate
@@ -80,11 +79,9 @@ If there are some shell configuration settings which you want secure or
 specific to one system, place it into a ~/.bashrc file. This will be 
 loaded automatically if it exists.
 
-
 === Gem
 
-Don't install ri and rdoc.
-
+Disables generation of ri and rdoc.
 
 === Git
 
@@ -98,6 +95,7 @@ Adds shortcuts like:
   gd    # git diff --word-diff (since git 1.7.2)
   gg    # git graph ...
   gpl   # git pull --rebase
+  gup   # git up (install git-up gem first)
 
 And so forth.
 
@@ -107,11 +105,9 @@ Happy Git Commits (http://collectiveidea.com/blog/archives/2010/08/03/happy-git-
   cd .git/hooks
   ln -s ~/.git/hooks/post-commit
 
-
 === IRB
 
 Adds colour and better inspector (looksee).
-
 
 === Screen
 
