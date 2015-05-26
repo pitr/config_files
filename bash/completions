@@ -35,3 +35,6 @@ if [ -f /usr/local/Library/Contributions/brew_bash_completion.sh ]; then
 fi
 
 source ~/.bash/ssh_completion
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
