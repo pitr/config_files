@@ -19,43 +19,54 @@ fi
 # Make C-a/C-e work as home/end
 set -o emacs
 
-GREEN="\[\033[0;32m\]"
-WHITE="\[\033[1;37m\]"
-RED="\[\033[1;31m\]"
+GREEN="\[\033[38;5;112m\]"
+RED="\[\033[38;5;197m\]"
+BLUE="\[\033[1;34m\]"
+BACKGROUND="\[\033[48;5;235m\]"
 NONE="\[\033[0m\]"
 
-function _parse_git_stash {
+_ps1_fg() {
+  echo -n "\033[38;5;$1m"
+}
+
+_ps_green() {
+  echo -n "$BACKGROUND$GREEN"
+}
+
+_ps_red() {
+  echo -n "$BACKGROUND$RED"
+}
+
+_ps_blue() {
+  echo -n "$BACKGROUND$BLUE"
+}
+
+_ps_clear() {
+  echo -n "\e[0m"
+}
+
+_parse_git_stash() {
   git stash list 2> /dev/null | wc -l | awk '{print $1}'
 }
 
-function _parse_git_branch {
+_parse_git_branch() {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1^$(_parse_git_stash) /"
 }
 
-function _parse_git_part {
-  echo -n "$(_parse_git_branch)"
+_parse_git_part() {
+  if git rev-parse --git-dir > /dev/null 2>&1; then
+    echo -n "|$(_ps_blue) $(_parse_git_branch) $(_ps_clear) "
+  fi
 }
 
-function _parse_ruby_version {
-  rbenv version-name
-}
-
-function _parse_ruby_part {
-  echo -n "(ruby-$(_parse_ruby_version))"
-}
-
-function _print_prompt {
-  printf "$(_parse_git_part)$(_parse_ruby_part)"
-}
-
-function exitstatus {
+exitstatus() {
   EXITSTATUS="$?"
 
   if [ "$EXITSTATUS" -eq "0" ]
   then
-    PS1="\n$GREEN\w$NONE \$(_print_prompt)\n${GREEN}✔$NONE "
+    PS1="\n$(_ps_green) \t $(_ps_clear)|$(_ps_red) \w $(_ps_clear)$(_parse_git_part)\n${GREEN}✔$NONE "
   else
-    PS1="\n$RED\w$NONE \$(_print_prompt)\n${RED}✘$NONE "
+    PS1="\n$(_ps_green) \t $(_ps_clear)|$(_ps_red) \w $(_ps_clear)$(_parse_git_part)\n${RED}✘$NONE "
   fi
   echo -ne "\033]0;${PWD##*/}\007"
 }
