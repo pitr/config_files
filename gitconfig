@@ -12,8 +12,8 @@
 [format]
   pretty = %Cblue%h%Creset %Cgreen[%cr]%Creset (%an) %s
 [alias]
-  b = branch -v
-  bb = branch -a -v
+  b = branch -vv
+  bb = branch -a -vv
   c = commit -m
   a = add
   co = checkout
@@ -44,7 +44,7 @@
   who = blame -CCCw
 [user]
   name = ☃ pitr
-  email = pitr.vern@gmail.com
+  useconfigonly = true
 [branch]
   autosetuprebase = always
 [credential]
