@@ -38,3 +38,5 @@ source ~/.bash/ssh_completion
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
+complete -C aws_completer aws
+
