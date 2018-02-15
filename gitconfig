@@ -7,7 +7,7 @@
   ui = 1
 [core]
   excludesfile = ~/.gitignore
-  editor = subl -w
+  editor = subl --wait
   autocrlf = input
 [format]
   pretty = %Cblue%h%Creset %Cgreen[%cr]%Creset (%an) %s
@@ -17,8 +17,8 @@
   c = commit -m
   a = add
   co = checkout
-  d = diff --word-diff
-  dc = diff --cached --word-diff
+  d = diff
+  dc = diff --cached
   pl = pull --rebase
   ps = push
   plre = pull --rebase
@@ -48,6 +48,13 @@
 [branch]
   autosetuprebase = always
 [credential]
-  helper = osxkeychain
+	helper = osxkeychain
 [help]
   autocorrect = 1
+[pager]
+  #diff = diff-so-fancy | less --tabs=1,5 -RFX
+  show = diff-so-fancy | less --tabs=1,5 -RFX
+[filter "lfs"]
+  clean = git-lfs clean %f
+  smudge = git-lfs smudge %f
+  required = true

@@ -15,7 +15,6 @@ fi
 export PATH=,:"${PATH}"
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-
 # {{{
 # Node Completion - Auto-generated, do not touch.
 shopt -s progcomp
@@ -26,5 +25,4 @@ shopt -s progcomp
 done
 # }}}
 
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
+test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"

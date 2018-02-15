@@ -91,3 +91,5 @@ npm-debug.log
 
 .powenv
 .powder
+
+.idea/codeStyleSettings.xml
