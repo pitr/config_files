@@ -42,6 +42,7 @@
   f = flow
   su = submodule update --init --recursive --quiet
   who = blame -CCCw
+  up = pull --rebase --autostash --prune
 [user]
   name = ☃ pitr
   useconfigonly = true
