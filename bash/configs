@@ -46,15 +46,16 @@ _ps_clear() {
 }
 
 _parse_git_stash() {
+  # this is tooooo slow in git v2.15+
   git stash list 2> /dev/null | wc -l | awk '{print $1}'
 }
 
 _parse_git_branch() {
-  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1^$(_parse_git_stash) /"
+  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1/"
+  #git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1^$(_parse_git_stash) /"
 }
 
 _parse_git_part() {
-  # this is tooooo slow in git v2.15+
   if git rev-parse --git-dir > /dev/null 2>&1; then
     echo -n "|$(_ps_blue) $(_parse_git_branch) $(_ps_clear) "
   fi
