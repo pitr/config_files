@@ -6,9 +6,19 @@
 		".hg",
 		"CVS",
 		".cache",
-		"node_modules"
+		".bundle",
+		"node_modules",
+		"dist",
+		"build",
+		"tmp/cache"
 	],
-	"font_size": 17,
+	"font_face": "Fira Code Medium",
+	"font_options":
+	[
+		"subpixel_antialias",
+		"gray_antialias"
+	],
+	"font_size": 19,
 	"ignored_packages":
 	[
 		"Vintage"

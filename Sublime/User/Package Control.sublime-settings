@@ -5,8 +5,11 @@
 	],
 	"installed_packages":
 	[
+		"All Autocomplete",
 		"GitGutter",
+		"Gofmt",
 		"Package Control",
+		"Pretty JSON",
 		"TypeScript"
 	]
 }
