@@ -93,3 +93,8 @@ npm-debug.log
 .powder
 
 .idea/codeStyleSettings.xml
+
+
+## Java
+.idea
+*.iml
