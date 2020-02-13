@@ -1,43 +1,6 @@
-function hack {
-  CURRENT=`git branch | grep '\*' | awk '{print $2}'`
-  git checkout master
-  git pull origin master
-  git checkout ${CURRENT}
-  git rebase master
-}
-
-function ship {
-  CURRENT=`git branch | grep '\*' | awk '{print $2}'`
-  git checkout master
-  git merge ${CURRENT}
-  git push origin master
-  git checkout ${CURRENT}
-}
-
-function deploy {
-  CURRENT=`git branch | grep '\*' | awk '{print $2}'`
-  git checkout master
-  git push heroku master
-  git checkout ${CURRENT}
-}
-
-function grep4 {
-  sed -n '
-  '/$1/' !{;H;x;s/^.*\n\(.*\n.*\)$/\1/;x;}
-  '/$1/' {;H;n;H;x;p;a\
-  ---
-  }'
-}
-
-# open man pages in mate
-function tman {
-  MANWIDTH=160 MANPAGER='col -bx' man $@ | mate
-}
-
 # rails stuff
 alias migrate="rake db:migrate"
 alias remigrate="rake db:migrate && rake db:migrate:redo"
-alias tlog='tail -f log/development.log'
 alias bi='bundle install --binstubs=, --path=.bundle/gems'
 alias bu='bundle update'
 
@@ -52,24 +15,12 @@ g() {
 
 gpr() {
   originurl=$(git config --get remote.origin.url)
-  originurl=${originurl/git\@github\.com\:/https://github.com/}
-  originurl=${originurl/\git:/https:}
+  originurl=${originurl/\://}
   originurl=${originurl/\.git/}
+  originurl=${originurl/git\@/https://}
+  originurl=${originurl/https\//https:}
   branchName=$(git rev-parse --abbrev-ref HEAD)
   giturl=$originurl"/compare/"$branchName"?expand=1"
-  open $giturl
-}
-
-gbr() {
-  originurl=$(git config --get remote.origin.url | tr '[:upper:]' '[:lower:]')
-  originurl=${originurl/git\@bitbucket\.org\:/https://bitbucket.org/}
-  originurl=${originurl/\git:/https:}
-  originurl=${originurl/\.git/}
-
-  path=$(git config --get remote.origin.url | tr '[:upper:]' '[:lower:]' | sed -e 's/git@bitbucket.org://')
-
-  branchName=$(git rev-parse --abbrev-ref HEAD)
-  giturl=$originurl"/pull-request/new?source="$path"::"$branchName
   open $giturl
 }
 
@@ -104,34 +55,28 @@ alias gup="git up"
 alias sta="git stash"
 alias uns="git stash pop"
 
-# file system stuff
+# file system
 alias ls="ls -FhG"
 alias ll="ls -AlG"
 alias l="ls -AFG"
-function c { cd ~/code/$1; }
+if type lsd >/dev/null; then
+  alias ls='lsd'
+  alias ll="ls -al"
+  alias l="ls -a"
+fi
 alias ..='cd ..'
 alias ...='cd ../..'
 
-# rails3 stuff
+# rails
 alias r="rails"
 alias rc="rails c"
 alias rs="rails s"
 alias rg="rails g"
 
-# other stuff
-#alias s="screen"
-
-# screen replacement
-alias tu="tmux"
-alias tua="tmux attach -t"
-alias tun="tmux new -s"
-alias tus="tmux switch-client -t"
-
+# others
 alias e='subl .'
 
-# hack && ship
-alias hs="hack && ship"
-alias hsd="hack && ship && deploy"
-alias hrs="hack && rake && ship"
-
 alias pp="git pull --rebase && git push"
+
+function c { cd ~/code/$1; }
+

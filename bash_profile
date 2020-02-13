@@ -1,28 +1,13 @@
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
-
 source ~/.bash/aliases
-source ~/.bash/completions
-source ~/.bash/paths
+source ~/.bash/bash
 source ~/.bash/configs
+source ~/.bash/custom
 
-if [ -f ~/.bashrc ]; then
-  . ~/.bashrc
-fi
+complete -C ~/.bash/project_completion -o default c
 
-# first in PATH is bundler's bin folder
-export PATH=,:"${PATH}"
+export BASH_SILENCE_DEPRECATION_WARNING=1
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-# {{{
-# Node Completion - Auto-generated, do not touch.
-shopt -s progcomp
-
-[ -d ~/.node-completion ] && for f in $(command ls ~/.node-completion); do
-  f="$HOME/.node-completion/$f"
-  test -f "$f" && . "$f"
-done
-# }}}
-
-test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
+source ~/.bash/zkubectl.bash.inc

@@ -1,24 +1,6 @@
 #!/usr/bin/env ruby
 
-class ProjectCompletion
-  def initialize(command)
-    @command = command
-  end
-  
-  def matches
-    projects.select do |task|
-      task[0, typed.length] == typed
-    end
-  end
-  
-  def typed
-    @command[/\s(.+?)$/, 1] || ''
-  end
-  
-  def projects
-    `ls -F ~/code/ | grep -E "/$"`.split
-  end
-end
-
-puts ProjectCompletion.new(ENV["COMP_LINE"]).matches
+root = File.join(Dir.home, 'code')
+puts Dir.children(root).select{|p| File.directory?(File.join(root,p)) and p.start_with?(ENV['COMP_LINE'].split[1].to_s)}
 exit 0
+
