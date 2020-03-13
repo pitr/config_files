@@ -29,12 +29,6 @@ task :install do
       link_file(file)
     end
   end
-
-  if File.exists?(File.expand_path('~/.powerlevel10k'))
-    Kernel.exec 'git -C ~/.powerlevel10k pull'
-  else
-    Kernel.exec 'git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.powerlevel10k'
-  end
 end
 
 task :default => :install

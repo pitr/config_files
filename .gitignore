@@ -3,6 +3,8 @@
 vim/.netrwhist
 vim/bundle
 .DS_Store
+bash/custom
+bash/zk*
 
 ### SublimeText ###
 # Cache files for Sublime Text

@@ -37,6 +37,7 @@
   g = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr by %C(yellow)%an%Creset)%Creset' --abbrev-commit --date=relative
   ci = commit
   ca = commit --amend
+  can = commit --amend --no-edit
   bs = bisect
   rb = rebase
   f = flow
@@ -53,7 +54,6 @@
 [help]
   autocorrect = 1
 [pager]
-  #diff = diff-so-fancy | less --tabs=1,5 -RFX
   show = diff-so-fancy | less --tabs=1,5 -RFX
 [filter "lfs"]
   clean = git-lfs clean %f
