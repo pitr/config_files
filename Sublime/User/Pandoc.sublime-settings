@@ -1,0 +1,26 @@
+{
+  "user": {
+    "pandoc-path": "/usr/local/bin/pandoc",
+    "transformations": {
+      "rst to md": {
+        // Opens output in new buffer (instead of replacing input in same buffer)
+        "new-buffer": 1,
+        // maps sublime scope to input format. If the input matches against the
+        // given scope, this transformation becomes available, and the input
+        // format is used as the pandoc --from option.
+        // @see http://docs.sublimetext.info/en/latest/extensibility/syntaxdefs.html#scopes
+        // @see score_selector() http://www.sublimetext.com/docs/3/api_reference.html
+        // @see http://johnmacfarlane.net/pandoc/README.html#options
+        "scope": {
+          "text.restructuredtext": "rst"
+        },
+        // sublime syntax file of output format, will set output to this syntax
+        "syntax_file": "Packages/Markdown/Markdown.tmLanguage",
+        "pandoc-arguments": [
+          "--to=gfm",
+          "--wrap=preserve"
+        ]
+      }
+    }
+  }
+}

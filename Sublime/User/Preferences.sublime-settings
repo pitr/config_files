@@ -21,6 +21,7 @@
 	"font_size": 19,
 	"ignored_packages":
 	[
+		"Rust",
 		"Vintage"
 	],
 	"save_on_focus_lost": true,
