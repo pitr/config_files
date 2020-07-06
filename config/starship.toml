@@ -13,14 +13,31 @@ disabled = false
 threshold = 40
 style = "bold red"
 
-[directory]
-truncate_to_repo = false
-fish_style_pwd_dir_length = 1
+[git_branch]
+truncation_length = 6
+
+[golang]
+disabled = true
+
+[java]
+disabled = true
 
 [kubernetes]
 disabled = false
 
 [line_break]
+disabled = true
+
+[nodejs]
+disabled = true
+
+[package]
+disabled = true
+
+[python]
+disabled = true
+
+[ruby]
 disabled = true
 
 [time]
