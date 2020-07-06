@@ -1,0 +1,9 @@
+{
+	"clients":
+	{
+		"gopls":
+		{
+			"enabled": true
+		}
+	}
+}

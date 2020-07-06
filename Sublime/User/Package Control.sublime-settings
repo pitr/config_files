@@ -6,17 +6,12 @@
 	"installed_packages":
 	[
 		"All Autocomplete",
-		"C Improved",
-		"Crystal",
 		"Dockerfile Syntax Highlighting",
 		"GitGutter",
-		"Gofmt",
 		"JQ Syntax",
-		"LLVM",
+		"LSP",
 		"Package Control",
-		"Pandoc",
 		"Pretty JSON",
-		"Rust Enhanced",
 		"TOML",
 		"TypeScript"
 	]
