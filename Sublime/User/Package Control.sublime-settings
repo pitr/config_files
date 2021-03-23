@@ -6,13 +6,15 @@
 	"installed_packages":
 	[
 		"All Autocomplete",
+		"auto-dark",
 		"Dockerfile Syntax Highlighting",
 		"GitGutter",
-		"JQ Syntax",
+		"HexViewer",
 		"LSP",
 		"Package Control",
 		"Pretty JSON",
 		"TOML",
-		"TypeScript"
+		"TypeScript",
+		"Zig Language"
 	]
 }

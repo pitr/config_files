@@ -1,8 +1,7 @@
-# Don't print a new line at the start of the prompt
 add_newline = false
 
-[aws]
-disabled = true
+[time]
+disabled = false
 
 [battery]
 full_symbol = "🔋"
@@ -16,29 +15,52 @@ style = "bold red"
 [git_branch]
 truncation_length = 6
 
-[golang]
-disabled = true
-
-[java]
-disabled = true
-
 [kubernetes]
 disabled = false
 
+[aws]
+disabled = true
+[cmake]
+disabled = true
+[crystal]
+disabled = true
+[git_commit]
+disabled = true
+[git_state]
+disabled = true
+[git_status]
+disabled = true
+[golang]
+disabled = true
+[java]
+disabled = true
+[julia]
+disabled = true
+[kotlin]
+disabled = true
 [line_break]
 disabled = true
-
+[lua]
+disabled = true
+[nim]
+disabled = true
 [nodejs]
 disabled = true
-
+[ocaml]
+disabled = true
 [package]
 disabled = true
-
+[perl]
+disabled = true
+[php]
+disabled = true
 [python]
 disabled = true
-
 [ruby]
 disabled = true
-
-[time]
-disabled = false
+[rust]
+disabled = true
+[swift]
+disabled = true
+[zig]
+disabled = true

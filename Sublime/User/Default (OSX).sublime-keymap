@@ -1,4 +1,10 @@
 [
     { "keys": ["super+j"], "command": "toggle_side_bar" },
     { "keys": ["shift+super+j"], "command": "reveal_in_side_bar"},
+
+    { "keys": ["alt+enter"], "command": "lsp_code_actions", "context": [{"key": "setting.lsp_active"}]},
+    { "keys": ["alt+up"], "command": "lsp_symbol_references", "context": [{"key": "setting.lsp_active"}]},
+    { "keys": ["alt+down"], "command": "lsp_symbol_definition", "context": [{"key": "setting.lsp_active"}]},
+    { "keys": ["shift+alt+down"], "command": "lsp_symbol_declaration", "context": [{"key": "setting.lsp_active"}]},
+    { "keys": ["shift+alt+up"], "command": "lsp_symbol_implementation", "context": [{"key": "setting.lsp_active"}]},
 ]

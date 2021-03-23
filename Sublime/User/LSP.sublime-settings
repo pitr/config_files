@@ -3,7 +3,26 @@
 	{
 		"gopls":
 		{
+			"command":
+			[
+			],
 			"enabled": true
+		},
+		"zig":
+		{
+			"command":
+			[
+			],
+			"enabled": true,
+			"languageId": "zig",
+			"scopes":
+			[
+				"source.zig"
+			],
+			"syntaxes":
+			[
+				"Packages/Zig Language/Syntaxes/Zig.tmLanguage"
+			]
 		}
 	}
 }
