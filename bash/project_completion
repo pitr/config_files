@@ -1,6 +1,0 @@
-#!/usr/bin/env ruby
-
-root = File.join(Dir.home, 'code')
-puts Dir.children(root).select{|p| File.directory?(File.join(root,p)) and p.start_with?(ENV['COMP_LINE'].split[1].to_s)}
-exit 0
-

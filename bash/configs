@@ -1,4 +1,0 @@
-export PYTHONSTARTUP=~/.pythonrc
-export EDITOR="subl --wait"
-
-export PATH=,:~/bin:.:~/go/bin:$HOME/.cargo/bin:/usr/local/opt/mysql@5.5/bin:"${PATH}"

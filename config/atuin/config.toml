@@ -1,0 +1,5 @@
+db_path = "~/.local/share/atuin/history.db"
+key_path = "~/.local/share/atuin/key"
+dialect = "uk"
+search_mode = "fulltext"
+auto_sync = false

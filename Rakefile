@@ -3,8 +3,10 @@ require 'rake'
 desc "install the dot files into user's home directory"
 task :install do
   replace_all = false
+  system %Q{cp "$PWD/litestream.plist" "~/Library/LaunchAgents/"}
+  puts "please run: launchctl load ~/Library/LaunchAgents/litestream.plist"
   Dir['*'].each do |file|
-    next if %w[Rakefile README.rdoc].include? file
+    next if %w[Rakefile README.rdoc litestream.plist].include? file
 
     if File.exist?(File.join(ENV['HOME'], ".#{file}"))
       if File.identical? file, File.join(ENV['HOME'], ".#{file}")

@@ -38,6 +38,6 @@
 	"save_on_focus_lost": true,
 	"show_encoding": true,
 	"theme": "Adaptive.sublime-theme",
-	"translate_tabs_to_spaces": true,
+	"translate_tabs_to_spaces": false,
 	"trim_trailing_white_space_on_save": true
 }

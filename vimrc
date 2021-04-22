@@ -1,38 +1,10 @@
-" Use Vim settings, rather then Vi settings (much better!).
-" This must be first, because it changes other options as a side effect.
 set nocompatible
-
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-
-Bundle 'gmarik/vundle'
-
-" adds awesome statusbar
-Bundle 'Lokaltog/vim-powerline'
-" adds file tree
-Bundle 'scrooloose/nerdtree'
-" automatically end if's with end's etc
-Bundle 'tpope/vim-endwise'
-" vim-rails, the
-Bundle 'tpope/vim-rails'
-" surround stuff with brackets and stuff
-Bundle 'tpope/vim-surround'
-" just like in TextMate, open files
-Bundle 'git://git.wincent.com/command-t.git'
-" vivid chalk color scheme
-Bundle 'tpope/vim-vividchalk'
-
-
-" open a NERDTree automatically when directory is opened
-autocmd vimenter * if !argc() | NERDTree | endif
-" close vim when NERDTree is the only window left
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
-set backupdir=~/.vim/backup//
-set directory=~/.vim/swp//
+set backupdir=~/.vim/backup/
+set directory=~/.vim/swp/
 set history=50		" keep 50 lines of command line history
 set ruler		" show the cursor position all the time
 set showcmd		" display incomplete commands
@@ -84,14 +56,6 @@ else
 
 endif " has("autocmd")
 
-" if has("folding")
-  " set foldenable
-  " set foldmethod=syntax
-  " set foldlevel=1
-  " set foldnestmax=2
-  " set foldtext=strpart(getline(v:foldstart),0,50).'\ ...\ '.substitute(getline(v:foldend),'^[\ #]*','','g').'\ '
-" endif
-
 " Softtabs, 2 spaces
 set tabstop=2
 set shiftwidth=2
@@ -102,29 +66,6 @@ set laststatus=2
 
 " \ is the leader character
 let mapleader = "\\"
-
-" Edit the README_FOR_APP (makes :R commands work)
-map <Leader>R :e doc/README_FOR_APP<CR>
-
-" Leader shortcuts for Rails commands
-map <Leader>m :Rmodel 
-map <Leader>c :Rcontroller 
-map <Leader>v :Rview 
-map <Leader>u :Runittest 
-map <Leader>f :Rfunctionaltest 
-map <Leader>i :Rintegrationtest 
-map <Leader>h :Rhelper 
-map <Leader>tm :RTmodel 
-map <Leader>tc :RTcontroller 
-map <Leader>tv :RTview 
-map <Leader>tu :RTunittest 
-map <Leader>tf :RTfunctionaltest 
-map <Leader>sm :RSmodel 
-map <Leader>sc :RScontroller 
-map <Leader>sv :RSview 
-map <Leader>su :RSunittest 
-map <Leader>sf :RSfunctionaltest 
-map <Leader>si :RSintegrationtest 
 
 " Hide search highlighting
 map <Leader>l :set invhls <CR>
@@ -141,15 +82,9 @@ map <Leader>te :tabe <C-R>=expand("%:p:h") . "/" <CR>
 " Command mode: Ctrl+P
 cmap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
 
-" Maps autocomplete to tab
-" imap <Tab> <C-P>
-
 " Duplicate a selection
 " Visual mode: D
 vmap D y'>p
-
-" For Haml
-au! BufRead,BufNewFile *.haml         setfiletype haml
 
 " No Help, please
 nmap <F1> <Esc>
@@ -163,10 +98,6 @@ vmap P p :call setreg('"', getreg('0')) <CR>
 
 " Display extra whitespace
 set list listchars=tab:»·,trail:·,extends:>,precedes:<,eol:¸
-
-" Edit routes
-command! Rroutes :e config/routes.rb
-command! RTroutes :tabe config/routes.rb
 
 " Local config
 if filereadable(".vimrc.local")
@@ -186,9 +117,6 @@ highlight Folded  guibg=#0A0A0A guifg=#9090D0
 " Numbers
 set number
 set numberwidth=5
-
-" Snippets are activated by Shift+Tab
-let g:snippetsEmu_key = "<S-Tab>"
 
 " Tab completion options
 set wildmode=list:longest,list:full
