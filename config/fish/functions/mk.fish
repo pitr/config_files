@@ -1,4 +1,4 @@
 function mk
-  mkdir $argv
-  cd $argv
+    mkdir $argv
+    cd $argv
 end
