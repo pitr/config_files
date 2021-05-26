@@ -3,9 +3,9 @@
 	"auto_complete_cycle": true,
 	"caret_extra_width": 2,
 	"caret_style": "phase",
-	"color_scheme": "Packages/User/min.tmTheme",
-	"color_scheme.dark": "Packages/User/min.tmTheme",
-	"color_scheme.light": "Packages/User/min.light.tmTheme",
+	"color_scheme": "auto",
+	"dark_color_scheme": "Packages/User/min.tmTheme",
+	"light_color_scheme": "Packages/User/min.light.tmTheme",
 	"drag_text": false,
 	"folder_exclude_patterns":
 	[
@@ -32,12 +32,12 @@
 	"highlight_line": true,
 	"ignored_packages":
 	[
-		"Vintage"
+		"Vintage",
 	],
 	"lsp_format_on_save": true,
 	"save_on_focus_lost": true,
 	"show_encoding": true,
 	"theme": "Adaptive.sublime-theme",
 	"translate_tabs_to_spaces": false,
-	"trim_trailing_white_space_on_save": true
+	"trim_trailing_white_space_on_save": true,
 }
