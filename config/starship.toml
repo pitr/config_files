@@ -31,7 +31,21 @@ disabled = true
 disabled = true
 [git_status]
 disabled = true
+[dart]
+disabled = true
+[deno]
+disabled = true
+[dotnet]
+disabled = true
+[elixir]
+disabled = true
+[elm]
+disabled = true
+[erlang]
+disabled = true
 [golang]
+disabled = true
+[helm]
 disabled = true
 [java]
 disabled = true
@@ -55,13 +69,25 @@ disabled = true
 disabled = true
 [php]
 disabled = true
+[purescript]
+disabled = true
 [python]
+disabled = true
+[red]
 disabled = true
 [ruby]
 disabled = true
 [rust]
 disabled = true
+[scala]
+disabled = true
 [swift]
+disabled = true
+[terraform]
+disabled = true
+[vlang]
+disabled = true
+[vagrant]
 disabled = true
 [zig]
 disabled = true
