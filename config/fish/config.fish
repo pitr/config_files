@@ -1,8 +1,8 @@
 set fish_greeting
 
 set -gx EDITOR subl -w
-set -gx PATH ~/bin ~/go/bin ~/.cargo/bin/ $PATH
-set -gx CDPATH . ~/code
+set -gx PATH ~/bin ~/go/bin ~/.cargo/bin/ /opt/homebrew/bin ~/Library/Python/3.8/bin $PATH
+set -gx CDPATH . ~/code ~
 
 function fish_right_prompt
     date "+"(set_color -o yellow)"%H:%M:%S"

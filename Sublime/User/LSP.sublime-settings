@@ -5,6 +5,7 @@
 		{
 			"command":
 			[
+				"~/go/bin/gopls"
 			],
 			"enabled": true
 		},
