@@ -1,0 +1,5 @@
+// Settings in here override those in "Zig Language/Settings/Zig.sublime-settings",
+
+{
+	"zig.executable": "/opt/homebrew/bin/zig"
+}
