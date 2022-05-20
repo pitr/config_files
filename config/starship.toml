@@ -1,16 +1,11 @@
 add_newline = false
 
-[time]
-disabled = true
+format = "$kubernetes$directory$git_branch$git_state$cmd_duration$jobs$status$shell$character"
+#right_format = "$time"
 
-[battery]
-full_symbol = ""
-charging_symbol = ""
-discharging_symbol = ""
+[time]
 disabled = false
-[[battery.display]]
-threshold = 40
-style = "bold red"
+format = "[$time]($style)"
 
 [git_branch]
 truncation_length = 6
@@ -19,75 +14,13 @@ format = "[$symbol$branch]($style) "
 [kubernetes]
 disabled = false
 
-[aws]
-disabled = true
-[cmake]
-disabled = true
-[crystal]
-disabled = true
-[git_commit]
-disabled = true
-[git_state]
-disabled = true
-[git_status]
-disabled = true
-[dart]
-disabled = true
-[deno]
-disabled = true
-[dotnet]
-disabled = true
-[elixir]
-disabled = true
-[elm]
-disabled = true
-[erlang]
-disabled = true
-[golang]
-disabled = true
-[helm]
-disabled = true
-[java]
-disabled = true
-[julia]
-disabled = true
-[kotlin]
-disabled = true
-[line_break]
-disabled = true
-[lua]
-disabled = true
-[nim]
-disabled = true
-[nodejs]
-disabled = true
-[ocaml]
-disabled = true
-[package]
-disabled = true
-[perl]
-disabled = true
-[php]
-disabled = true
-[purescript]
-disabled = true
-[python]
-disabled = true
-[red]
-disabled = true
-[ruby]
-disabled = true
-[rust]
-disabled = true
-[scala]
-disabled = true
-[swift]
-disabled = true
-[terraform]
-disabled = true
-[vlang]
-disabled = true
-[vagrant]
-disabled = true
-[zig]
-disabled = true
+[status]
+format = "[$status]($style)"
+pipestatus_separator = ","
+pipestatus = true
+pipestatus_format = "$pipestatus "
+disabled = false
+
+[cmd_duration]
+show_notifications = true
+min_time_to_notify = 5_000

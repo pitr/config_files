@@ -1,0 +1,10 @@
+// These settings override both User and Default settings for the APL syntax
+{
+	"auto_complete": false,
+	"color_scheme": "Monokai.sublime-color-scheme",
+	"ensure_newline_at_eof_on_save": true,
+	"font_face": "APL386 Unicode",
+	"font_size": 22,
+	"tab_completion": false,
+	"translate_tabs_to_spaces": true,
+}

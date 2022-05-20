@@ -1,8 +1,0 @@
-access-key-id: AKIA...
-secret-access-key: ...
-
-dbs:
-  - path: ~/.local/share/atuin/history.db
-    replicas:
-      - url: s3://BUCKET/atuin/history.db
-

@@ -6,13 +6,14 @@
 	"installed_packages":
 	[
 		"All Autocomplete",
+		"APL Highlighting",
 		"Dockerfile Syntax Highlighting",
 		"GitGutter",
 		"HexViewer",
 		"LSP",
 		"Package Control",
+		"PlainTasks",
 		"Pretty JSON",
 		"TOML",
-		"Zig Language",
 	],
 }

@@ -1,0 +1,11 @@
+{
+    "cancel": { "kill": true },
+	"cmd": [
+		"/Applications/Dyalog-18.0.app/Contents/Resources/Dyalog/dyalog",
+		"-script",
+		"$file",
+		"ConfigFile=$HOME/.dyalog/dyalog.dcfg"
+	],
+	"word_wrap": false,
+	"selector": "source.apl"
+}

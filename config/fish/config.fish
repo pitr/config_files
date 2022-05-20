@@ -1,52 +1,51 @@
 set fish_greeting
 
 set -gx EDITOR subl -w
-set -gx PATH ~/bin ~/go/bin ~/.cargo/bin/ /opt/homebrew/bin ~/Library/Python/3.8/bin $PATH
+set -gx PATH ~/bin ~/go/bin /opt/homebrew/bin ~/Library/Python/3.8/bin $PATH
 set -gx CDPATH . ~/code ~
+
+set -gx HOMEBREW_NO_ENV_HINTS 1
+
+abbr -a -g .. cd ..
+abbr -a -g ... cd ../..
+abbr -a -g c cd
+abbr -a -g e subl .
+abbr -a -g ga git a
+abbr -a -g gadd 'git add -u && git add . && git status'
+abbr -a -g gb git b
+abbr -a -g gbb git bb
+abbr -a -g gbc 'git branch --merged | egrep -v \'(master|main|^\*)\' | xargs -n 1 git branch -d'
+abbr -a -g gbs git bs
+abbr -a -g gc git c
+abbr -a -g gca git ca
+abbr -a -g gcan git can
+abbr -a -g gd git d
+abbr -a -g gdc git dc
+abbr -a -g gg git g
+abbr -a -g gpl git pl
+abbr -a -g gps git ps
+abbr -a -g gr git r
+abbr -a -g gra git ra
+abbr -a -g grb git rb
+abbr -a -g grc git rc
+abbr -a -g gs git s
+abbr -a -g gst git st
+abbr -a -g gt git t
+abbr -a -g gup git up
+abbr -a -g psg 'ps aux | grep'
+abbr -a -g sta git stash
+abbr -a -g uns git stash pop
 
 function fish_right_prompt
     date "+"(set_color -o yellow)"%H:%M:%S"
 end
 
 starship init fish | source
+hi shell fish | source
 
-function ls
-    lsd $argv
-end
-
-function _atuin_preexec --on-event fish_preexec
-    set -gx ATUIN_HISTORY_ID (atuin history start "$argv[1]")
-end
-
-function _atuin_postexec --on-event fish_postexec
-    set -l s $status
-    if test -n "$ATUIN_HISTORY_ID"
-        RUST_LOG=error atuin history end $ATUIN_HISTORY_ID --exit $s &
-        disown
-    end
-end
-
-
-function _atuin_history
-    set -l h (RUST_LOG=error atuin search -i (commandline -b) 3>&1 1>&2 2>&3)
-    commandline -f repaint
-    if test -n "$h"
-        commandline -r $h
-    end
-end
-
-bind \cr _atuin_history
-
-function _atui_cancel
-    set -l cmd (commandline)
-    commandline -f cancel-commandline
-    if test -n "$cmd"
-        RUST_LOG=error atuin history end (atuin history start "$cmd") --exit 42 &
-        disown
-    end
-end
-
-bind \cc _atui_cancel
+command -q exa; and alias ls="exa  -b"
+command -q exa; and alias  l="exa -ab"
+command -q exa; and alias ll="exa -abl"
 
 function _fzf
     if test -z (commandline)
@@ -58,3 +57,9 @@ function _fzf
 end
 
 bind \cf _fzf
+
+function gitx
+    open -a GitX .
+end
+
+# custom
