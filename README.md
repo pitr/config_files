@@ -1,22 +1,18 @@
 # Peter's Dot Files
 
-***IMPORTANT*** change name and email in `.gitconfig` after installation
+***IMPORTANT*** set user.name and user.email in `.gitconfig` after installation
 
 ## Installation
 
-  git clone git://github.com/pitr/config_files ~/.config_files
-  cd ~/.config_files
+  git clone git://github.com/pitr/config_files
+  cd config_files
   rake install
 
 ## Environment
 
-Mac OS X will work. UNIX-based OS should work (the only problem is EDITOR is Sublime Text).
+Mac OS X will work. UNIX-based OS should work (the only problem: EDITOR is Sublime Text).
 
 Uses [starship](https://starship.rs/) for command prompt.
-
-Uses [atuin](https://github.com/ellie/atuin) for synchronizing shell history. Sets up [litestream](https://litestream.io/) to synchronize history to S3. Make sure to update ~/.config/litestream.yml with proper credentials and bucket name.
-
-Ctrl-R runs the command entered and pipes it to `fzf | pbcopy`.
 
 ## Commands
 
@@ -26,7 +22,7 @@ Adds ~/bin to PATH if it exists.
 
 Adds ~/code to CDPATH. `c` is alias for cd.
 
-Usual `ls`, `ll`, `l`, .. stuff.
+Usual `ls`, `ll`, `l`, .., ... and other aliases.
 
 Shortcuts for most used programs:
 
@@ -34,11 +30,7 @@ Shortcuts for most used programs:
   v - vim
   e - Sublime Text
 
-=== Ruby Gem
-
-Disables generation of ri and rdoc.
-
-=== Git
+### Git
 
 Adds shortcuts like:
 
@@ -57,11 +49,3 @@ Adds shortcuts like:
   gpr   # open pull request in web browser
 
 And so forth. Find all in [fish_variables](https://github.com/pitr/config_files/blob/master/config/fish/fish_variables)
-
-=== IRB
-
-Adds colour and better inspector (looksee).
-
-=== Screen
-
-Initializes 6 windows: main, code, gcc, git, irc, etc

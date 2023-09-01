@@ -1,18 +1,23 @@
 add_newline = false
 
-format = "$kubernetes$directory$git_branch$git_state$cmd_duration$jobs$status$shell$character"
-#right_format = "$time"
+format = "$kubernetes$directory$git_branch$git_state$jobs$status$shell$character"
+right_format = "$cmd_duration"
 
 [time]
-disabled = false
-format = "[$time]($style)"
+disabled = true
 
 [git_branch]
 truncation_length = 6
-format = "[$symbol$branch]($style) "
+format = "[$branch]($style) "
 
 [kubernetes]
 disabled = false
+style = "blue bold"
+symbol = "☸ "
+format = '[$symbol$context]($style) '
+[kubernetes.context_aliases]
+"arn:aws:eks:(?P<var_region>[\\w-]+):.*:cluster/(?P<var_cluster>[\\w-]+)" = "$var_cluster" # "$var_cluster/$var_region"
+
 
 [status]
 format = "[$status]($style)"
@@ -24,3 +29,5 @@ disabled = false
 [cmd_duration]
 show_notifications = true
 min_time_to_notify = 5_000
+format = "[$duration]($style)"
+

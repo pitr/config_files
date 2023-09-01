@@ -1,11 +1,9 @@
 {
     "cancel": { "kill": true },
 	"cmd": [
-		"/Applications/Dyalog-18.0.app/Contents/Resources/Dyalog/dyalog",
-		"-script",
-		"$file",
-		"ConfigFile=$HOME/.dyalog/dyalog.dcfg"
+		"/usr/local/bin/dyalogscript",
+		"ConfigFile=$HOME/.dyalog/dyalog.dcfg",
+		"$file"
 	],
-	"word_wrap": false,
 	"selector": "source.apl"
 }

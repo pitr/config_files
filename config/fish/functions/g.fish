@@ -1,6 +1,7 @@
 function g
-    if test (count $argv) -eq 0
-        set argv s
-    end
-    git $argv
+	if count $argv > /dev/null
+		git $argv
+	else
+		git s
+	end
 end

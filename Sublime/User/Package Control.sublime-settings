@@ -7,13 +7,10 @@
 	[
 		"All Autocomplete",
 		"APL Highlighting",
-		"Dockerfile Syntax Highlighting",
-		"GitGutter",
-		"HexViewer",
+		"JSON Reindent",
 		"LSP",
+		"LSP-gopls",
 		"Package Control",
-		"PlainTasks",
-		"Pretty JSON",
 		"TOML",
 	],
 }

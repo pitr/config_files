@@ -31,7 +31,7 @@
                 <key>lineHighlight</key>
                 <string>#cfcfc215</string>
                 <key>selection</key>
-                <string>gray</string>
+                <string>#777</string>
             </dict>
         </dict>
         <dict>

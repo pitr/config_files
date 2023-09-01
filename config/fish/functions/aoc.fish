@@ -1,6 +1,10 @@
 function aoc
-    set year (basename (pwd))
-    set day (dc -e "$argv[1] p")
-    curl --cookie session=COOOOOKIEEEEEE https://adventofcode.com/$year/day/$day/input > in/$argv[1].txt
+        set day $argv[1]
+        set year (basename (pwd))
+        set file (printf "%02d" $day)
+        touch in/"$file"e.txt
+        curl -s -H "cookie: session=$aoc" "https://adventofcode.com/$year/day/$day/input" > in/$file.txt
+        echo >$file.apl "\
+⎕CY'dfns'
+⎕← display ⊃⎕NGET'in/"$file"e.txt'1"
 end
-

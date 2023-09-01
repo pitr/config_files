@@ -5,6 +5,12 @@
     { "keys": ["alt+enter"], "command": "lsp_code_actions", "context": [{"key": "setting.lsp_active"}]},
     { "keys": ["alt+up"], "command": "lsp_symbol_references", "context": [{"key": "setting.lsp_active"}]},
     { "keys": ["alt+down"], "command": "lsp_symbol_definition", "context": [{"key": "setting.lsp_active"}]},
-    { "keys": ["shift+alt+down"], "command": "lsp_symbol_declaration", "context": [{"key": "setting.lsp_active"}]},
-    { "keys": ["shift+alt+up"], "command": "lsp_symbol_implementation", "context": [{"key": "setting.lsp_active"}]},
+    { "keys": ["shift+alt+up"], "command": "lsp_symbol_declaration", "context": [{"key": "setting.lsp_active"}]},
+    { "keys": ["shift+alt+down"], "command": "lsp_symbol_implementation", "context": [{"key": "setting.lsp_active"}]},
+
+    { "keys": ["super+shift+t"], "command": "reopen_last_file" },
+    { "keys": ["super+e"], "command": "eval_me" },
+
+    { "keys": ["ctrl+left"], "command": "jump_back" },
+    { "keys": ["ctrl+right"], "command": "jump_forward" },
 ]

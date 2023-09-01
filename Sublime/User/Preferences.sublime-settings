@@ -5,39 +5,28 @@
 	"caret_style": "phase",
 	"color_scheme": "auto",
 	"dark_color_scheme": "Packages/User/min.tmTheme",
-	"light_color_scheme": "Packages/User/min.light.tmTheme",
 	"drag_text": false,
-	"folder_exclude_patterns":
-	[
-		".svn",
-		".git",
-		".hg",
-		"CVS",
-		".cache",
+	"draw_indent_guides": false,
+	"fold_buttons": false,
+	"folder_exclude_patterns": [
 		".bundle",
-		"node_modules",
-		"dist",
+		".cache",
+		".git",
 		"build",
-		"tmp/cache",
-		"zig-cache"
-	],
-	"font_face": "Fira Code Medium",
-	"font_options":
-	[
-		"subpixel_antialias",
-		"gray_antialias"
+		"node_modules",
+		"tmp/cache"
 	],
 	"font_size": 19,
 	"gpu_window_buffer": true,
 	"highlight_line": true,
-	"ignored_packages":
-	[
-		"Vintage",
+	"ignored_packages": ["Vintage",
 	],
+	"light_color_scheme": "Packages/User/min.light.tmTheme",
 	"lsp_format_on_save": true,
 	"save_on_focus_lost": true,
 	"show_encoding": true,
 	"theme": "Adaptive.sublime-theme",
 	"translate_tabs_to_spaces": false,
 	"trim_trailing_white_space_on_save": true,
+	"update_check": true,
 }
