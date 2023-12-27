@@ -1,4 +1,7 @@
 function aoc
+        if test -z "$aoc"
+                echo aoc is not set && return 42
+        end
         set day $argv[1]
         set year (basename (pwd))
         set file (printf "%02d" $day)
@@ -7,4 +10,5 @@ function aoc
         echo >$file.apl "\
 ⎕CY'dfns'
 ⎕← display ⊃⎕NGET'in/"$file"e.txt'1"
+        subl $file.apl in/"$file"e.txt
 end

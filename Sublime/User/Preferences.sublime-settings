@@ -16,7 +16,7 @@
 		"node_modules",
 		"tmp/cache"
 	],
-	"font_size": 19,
+	"font_size": 20,
 	"gpu_window_buffer": true,
 	"highlight_line": true,
 	"ignored_packages": ["Vintage",
@@ -28,5 +28,5 @@
 	"theme": "Adaptive.sublime-theme",
 	"translate_tabs_to_spaces": false,
 	"trim_trailing_white_space_on_save": true,
-	"update_check": true,
+	"update_check": true
 }

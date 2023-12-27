@@ -6,4 +6,8 @@
 			"enabled": true,
 		},
 	},
+	"lsp_format_on_save": true,
+	"lsp_code_actions_on_save": {"source.fixAll": true},
+	"show_inlay_hints": true,
+	"semantic_highlighting": true,
 }

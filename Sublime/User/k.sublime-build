@@ -1,0 +1,8 @@
+{
+    "cancel": { "kill": true },
+	"cmd": [
+		"k",
+		"$file"
+	],
+	"selector": "source.k"
+}
